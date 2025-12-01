@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <title>US Citizenship Test Practice | USCIS Civics Test Simulator</title>
+    <meta name="description" content="Practice for the US citizenship civics test with our simulator. Features adaptive learning that helps you focus on questions you struggle with." />
+    <link rel="icon" type="image/svg+xml" href="https://cdn-icons-png.flaticon.com/512/5510/5510865.png">
+    <script>
+      // Apply dark mode based on system preference
+      function applyTheme() {
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+      }
+      
+      // Apply theme on load
+      applyTheme();
+      
+      // Listen for changes in system preference
+      if (window.matchMedia) {
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', applyTheme);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <!-- This is a replit script which adds a banner on the top of the page when opened in development mode outside the replit environment -->
+    <script type="text/javascript" src="https://replit.com/public/js/replit-dev-banner.js"></script>
+  </body>
+</html>
