@@ -6,7 +6,7 @@ CivicPrep is an adaptive study app for the USCIS civics test. It helps people pr
 
 Preparing for the US citizenship interview can be stressful because the content is simple on paper but difficult to retain under pressure. CivicPrep turns the official question bank into a guided learning loop: practice, test, review weak areas, and build confidence over time.
 
-This project is part of my public portfolio because it shows product thinking applied to a real user need: clear learning goals, low-friction practice, adaptive review, and progress visibility.
+This project is part of my public portfolio because it shows product thinking applied to a real user need: clear learning goals, low-friction practice, adaptive review, and progress visibility. It also had a practical outcome: I used the product and study flow to help around 10 people prepare for and pass the test.
 
 ## Product highlights
 
