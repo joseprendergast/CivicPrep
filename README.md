@@ -1,125 +1,102 @@
-# USCIS Civics Test Simulator
+# CivicPrep
 
-An intelligent, adaptive learning platform for US citizenship exam preparation featuring all 100 official USCIS civics questions.
+CivicPrep is an adaptive study app for the USCIS civics test. It helps people practice all 100 official questions, simulate the real 10-question interview format, and focus on the topics they are most likely to miss.
 
-## Features
+## Why this project matters
 
-- **Complete Question Bank**: All 100 official USCIS civics questions with multiple-choice answers
-- **Test Simulation**: 10-question tests requiring 6 correct answers to pass (matches actual test format)
-- **100 Questions Challenge**: Practice all 100 questions across 10 randomized test parts
-- **Adaptive Learning**: Algorithm prioritizes questions users struggle with most
-- **Localized Information**: Weehawken, NJ specific answers for local representatives and officials
-- **Dark Mode Support**: Automatic theme switching based on device preferences
-- **Progress Tracking**: Detailed statistics on test performance and learning progress
+Preparing for the US citizenship interview can be stressful because the content is simple on paper but difficult to retain under pressure. CivicPrep turns the official question bank into a guided learning loop: practice, test, review weak areas, and build confidence over time.
 
-## Question Categories
+This project is part of my public portfolio because it shows product thinking applied to a real user need: clear learning goals, low-friction practice, adaptive review, and progress visibility.
 
-- **American Government** (57 questions)
-  - System of Government
-  - Rule of Law
-  - Rights and Responsibilities
-- **American History** (31 questions)
-  - Colonial Period and Independence
-  - 1800s
-  - 1900s to Present
-- **Integrated Civics** (12 questions)
-  - Geography
-  - Symbols
-  - Holidays
+## Product highlights
 
-## Technical Stack
+- Complete question bank with all 100 official USCIS civics questions.
+- Realistic test simulation: 10 randomized questions, 6 correct answers required to pass.
+- 100-question challenge mode split into 10 parts for full coverage.
+- Adaptive practice that prioritizes questions the user struggles with most.
+- Localized answers for Weehawken, NJ representatives and officials.
+- Progress tracking for accuracy, pass rate, and challenge completion.
+- Dark mode and responsive UI for frequent short practice sessions.
 
-- **Frontend**: React with TypeScript, Tailwind CSS, shadcn/ui components
-- **Backend**: Node.js with Express
-- **Storage**: In-memory storage with TypeScript interfaces
-- **Routing**: Wouter for client-side routing
-- **State Management**: TanStack Query for server state
-- **Forms**: React Hook Form with Zod validation
-- **UI Components**: Radix UI primitives with custom styling
+## My role
 
-## Getting Started
+I defined the product concept, learning flow, feature set, and implementation approach. The goal was to create a simple but complete product experience rather than a static flashcard list.
 
-1. **Install dependencies**:
-   ```bash
-   npm install
-   ```
+Key product decisions:
 
-2. **Start the development server**:
-   ```bash
-   npm run dev
-   ```
+- Match the real interview format so practice feels familiar.
+- Use adaptive review to reduce wasted repetition.
+- Separate quick practice from full challenge mode.
+- Make progress visible without overwhelming the user.
+- Keep the interface calm and focused for high-frequency practice.
 
-3. **Open your browser**:
-   Navigate to `http://localhost:5000`
+## Tech stack
 
-## Project Structure
+- React
+- TypeScript
+- Tailwind CSS
+- shadcn/ui and Radix UI primitives
+- Node.js and Express
+- TanStack Query
+- React Hook Form
+- Zod
+- Wouter
 
+## Core user flows
+
+### Practice mode
+
+Users answer individual questions, receive immediate feedback, and revisit weaker areas more often.
+
+### Test simulation
+
+Users take a 10-question test that mirrors the USCIS interview scoring model. A passing score requires 6 correct answers.
+
+### 100-question challenge
+
+Users complete all 100 official questions across 10 randomized parts, with no repetition across each full challenge cycle.
+
+### Progress review
+
+Users can see test history, accuracy, pass rate, and completion progress to understand whether they are ready for the real interview.
+
+## Project structure
+
+```text
+client/                 Frontend React application
+  src/
+    components/         Reusable UI components
+    pages/              Page-level views
+    hooks/              Custom React hooks
+    lib/                Utilities and API client
+server/                 Express backend
+  services/             Business logic services
+  routes.ts             API routes
+  storage.ts            Storage interface
+shared/                 Shared types and schemas
 ```
-├── client/                 # Frontend React application
-│   ├── src/
-│   │   ├── components/     # Reusable UI components
-│   │   ├── pages/          # Page components
-│   │   ├── hooks/          # Custom React hooks
-│   │   └── lib/            # Utilities and API client
-├── server/                 # Backend Express server
-│   ├── services/           # Business logic services
-│   ├── routes.ts           # API route definitions
-│   └── storage.ts          # Data storage interface
-├── shared/                 # Shared types and schemas
-└── README.md
+
+## Run locally
+
+```bash
+npm install
+npm run dev
 ```
 
-## Test Modes
+Then open:
 
-### Practice Mode
-- Single question practice
-- Adaptive algorithm selects challenging questions
-- Immediate feedback with explanations
+```text
+http://localhost:5000
+```
 
-### Test Simulation
-- 10 randomized questions
-- Pass with 6+ correct answers
-- Tracks performance history
-- Avoids recently seen questions
+## Data source
 
-### 100 Questions Challenge
-- Complete all 100 questions across 10 tests
-- Each test labeled as "Part X of 10"
-- No question repetition across parts
-- Comprehensive coverage of all topics
+Questions and answers are based on official USCIS civics test materials. The USCIS civics question content is public domain.
 
-## Key Features Implementation
+## Portfolio note
 
-### Randomization
-- Questions randomized for each test
-- Answer options shuffled to prevent pattern memorization
-- Smart question selection avoids recent duplicates
-
-### Adaptive Learning
-- Tracks user performance per question
-- Prioritizes questions with lower success rates
-- Balances new content with review material
-
-### Progress Tracking
-- Tests taken and pass rates
-- Questions answered and accuracy
-- Detailed performance analytics
-- Challenge mode completion tracking
-
-## Development
-
-The application uses modern web development practices:
-
-- **TypeScript** for type safety
-- **React Query** for server state management
-- **Zod** for runtime type validation
-- **Tailwind CSS** for styling
-- **shadcn/ui** for consistent component design
-
-## Data Source
-
-Questions and answers are based on the official USCIS civics test materials, ensuring accuracy and compliance with current citizenship exam requirements.
+CivicPrep is a small product, but it reflects the same product habits I use in larger platform work: understand the user context, reduce friction, design a clear feedback loop, and make progress measurable.
 
 ## License
 
-This project is for educational purposes. USCIS question content is public domain.
+This project is for educational purposes.
